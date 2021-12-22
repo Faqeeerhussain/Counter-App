@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from './containers/CounterContainer'
+// import store from './services/store'
+import {Provider} from 'react-redux'
+import {store} from './services/store'
 
-function App() {
+export default function App() {
+  
   return (
-    <div className="App">
-      <h1>faqeerhussain</h1>
-    </div>
+    <Provider store={store}>
+      
+      <Home />
+      </Provider>
   );
-}
 
-export default App;
+}
